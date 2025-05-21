@@ -1,0 +1,29 @@
+/* styles.css */
+
+.order {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.order p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.order ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order li {
+    margin-bottom: 5px;
+}
+
+/* Optional: Styling für Bestellstatus */
+.order .status {
+    font-weight: normal;
+    color: #007bff;
+}

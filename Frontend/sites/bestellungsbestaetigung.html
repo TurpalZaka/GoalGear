@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestellbestätigung</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+    <div id="confirmationMessage"></div>
+    <div id="orderNumber"></div>
+
+    <script>
+        $(document).ready(function(){
+            // AJAX-Anfrage, um die Bestellbestätigungsnachricht und Bestellnummer zu laden
+            $.ajax({
+                type: "GET",
+                url: "../../Backend/logic/getConfirmationDetails.php", 
+                dataType: "json",
+                success: function(response){
+                    // Bestellbestätigungsnachricht und Bestellnummer in die entsprechenden DIV-Elemente einfügen
+                    $("#confirmationMessage").html("<p>" + response.message + "</p>");
+                    $("#orderNumber").html("<p>Bestellnummer: " + response.orderNumber + "</p>");
+                },
+                error: function(){
+                    // Fehlermeldung anzeigen, wenn die AJAX-Anfrage fehlschlägt
+                    $("#confirmationMessage").html("<p>Es gab ein Problem beim Laden der Bestellbestätigung. Bitte versuchen Sie es später erneut.</p>");
+                }
+            });
+        });
+    </script>
+    <script src="../js/common.js"></script>
+    <script src="../js/loginCheck.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

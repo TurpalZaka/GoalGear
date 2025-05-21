@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../../Frontend/sites/index.html">Goal Gear</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item login">
+          <a class="nav-link" href="./login.html">Login</a>
+        </li>
+        <li class="nav-item register">
+          <a class="nav-link" href="./register.html">Register</a>
+        </li>
+        <li class="nav-item profil">
+          <a class="nav-link" href="./profile.html">Mein Konto</a>
+        </li>
+        <li class="nav-item warenkorb">
+          <a class="nav-link" href="./warenkorb.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+          </a>
+        </li>
+        <li class="nav-item orderHistory">
+          <a class="nav-link" href="./orderHistory.html">Bestellungen</a>
+        </li>
+        <li class="nav-item dropdown admin">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./manageProduct.html">Produkte bearbeiten</a></li>
+            <li><a class="dropdown-item" href="./admin_customers.html">Kunden</a></li>
+            <li><a class="dropdown-item" href="./voucher.html">Gutschein erstellen</a></li>
+            <li><a class="dropdown-item" href="./showVoucher.html">Gutscheine anzeigen</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item logout">
+          <a class="nav-link" href="#" onclick="logout()">Logout</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
